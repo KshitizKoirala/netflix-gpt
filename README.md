@@ -19,6 +19,9 @@ Steps Followed while building the Project
 - Implemented Signout
 - Update Profile Firebase API Call
 - Fetch Movies from tmdb
+- **_HYGENE PRACTICES_**
+  => Unsubscribed to the onAuthStateChanged callback in Header.js
+  => Add the Hardcoded values to constants.js
 
 # Features
 

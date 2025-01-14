@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
+import { STATIC_PROFILE_IMAGE } from "../mocks/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -12,8 +13,11 @@ const Header = () => {
   const user = useSelector((store) => store.user?.userInfo);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      console.log("Auth State User", user);
+    /**
+     * When my component unmounts, we need to clear the onAuthStateChanged as well
+     */
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      // console.log("Auth State User", user);
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
@@ -24,9 +28,7 @@ const Header = () => {
               uid: uid,
               email: email,
               displayName: displayName,
-              photoURL:
-                photoURL ??
-                "https://imgs.search.brave.com/_1YhWGfJE_pbpg5x-rNvmWKanuf0TuNM8vjby3XCJhQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbmV0/ZmxpeC1wcm9maWxl/LXBpY3R1cmVzLTEw/MDAteC0xMDAwLXFv/OWg4MjEzNHQ5bnYw/ajAuanBn",
+              photoURL: photoURL ?? STATIC_PROFILE_IMAGE,
             },
           })
         );
@@ -37,6 +39,9 @@ const Header = () => {
         navigate("/");
       }
     });
+
+    // Unsubscribe when component unmounts
+    return () => unsubscribe();
   }, []);
 
   const handleSignOut = () => {
