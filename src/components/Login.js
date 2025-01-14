@@ -8,7 +8,6 @@ import {
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 
@@ -16,7 +15,6 @@ const Login = () => {
   const [isSignIn, setIsSignInForm] = useState(true);
   const [errorMessage, SetErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const email = useRef(null);
@@ -69,7 +67,6 @@ const Login = () => {
                   },
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -89,9 +86,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-          // console.log("Signed in user", user);
-          navigate("/browse");
+          // const user = userCredential.user;
         })
         .catch((error) => {
           const errorCode = error.code;
