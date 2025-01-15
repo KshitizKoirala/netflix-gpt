@@ -10,7 +10,7 @@ import { checkValidData } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
-import { BACKGROUND_IMAGE, STATIC_PROFILE_IMAGE } from "../mocks/constants";
+import { BACKGROUND_IMAGE, STATIC_PROFILE_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setIsSignInForm] = useState(true);

@@ -18,7 +18,17 @@ Steps Followed while building the Project
 - Create Redux Store with userSlice
 - Implemented Signout
 - Update Profile Firebase API Call
-- Fetch Movies from tmdb
+- Register for TMDB API and create an account and an APP and GET the access data
+- GET the data from TMDB now playing movies list API
+- Custom Hook to Fetch Now Playing Movies
+- Update store with movies Data
+- Updated Store with movies Data
+- Planning for Main Container and secondary container
+  = Fetch data for Trailer Videos
+- Update store with Trailer Video Data
+- Embedded Youtube video and made it autoplay and mute
+- Tailwind Classes to make Main Container look awesome
+
 - **_HYGENE PRACTICES_**
   => Unsubscribed to the onAuthStateChanged callback in Header.js
   => Add the Hardcoded values to constants.js

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { STATIC_PROFILE_IMAGE } from "../mocks/constants";
+import { STATIC_PROFILE_IMAGE } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-16 py-6 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-full px-16 py-6 bg-gradient-to-b from-black z-10 flex justify-between">
       <div>
         <Link to="/">
           <img className="w-36" alt="netlifx" src="./assets/netflix-logo.svg" />
