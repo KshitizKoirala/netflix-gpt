@@ -28,6 +28,11 @@ Steps Followed while building the Project
 - Update store with Trailer Video Data
 - Embedded Youtube video and made it autoplay and mute
 - Tailwind Classes to make Main Container look awesome
+- Build Secondary Container with movies list
+- Build Movies List
+- Build Movie Card
+- Created custom hook to fetch the data
+- update the browse page
 
 - **_HYGENE PRACTICES_**
   => Unsubscribed to the onAuthStateChanged callback in Header.js

@@ -10,5 +10,13 @@ export const TMDB_API_URL =
 export const TMDB_MOVIE_VIDEOS_LIST_API_URL =
   "https://api.themoviedb.org/3/movie/{{movieId}}/videos?language=en-US";
 
-export const TMDB_IMAGE_URL =
-  "https://image.tmdb.org/t/p/w780/1E5baAaEse26fej7uHcjOgEE2t2.jpg";
+export const TMDB_POPULAR_MOVIES_API_URL =
+  "https://api.themoviedb.org/3/movie/popular";
+
+export const TMDB_TOP_RATED_MOVIES_API_URL =
+  "https://api.themoviedb.org/3/movie/top_rated";
+
+export const TMDB_UPCOMING_MOVIES_API_URL =
+  "https://api.themoviedb.org/3/movie/upcoming";
+
+export const TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w780";
