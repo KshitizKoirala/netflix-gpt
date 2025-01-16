@@ -32,7 +32,10 @@ Steps Followed while building the Project
 - Build Movies List
 - Build Movie Card
 - Created custom hook to fetch the data
-- update the browse page
+- Updated the browse page to use GPT Search Feature
+  - GPR Search Page
+  - GPT Search Bar
+- (FEATURE) Multi-language Feature in our App
 
 - **_HYGENE PRACTICES_**
   => Unsubscribed to the onAuthStateChanged callback in Header.js
@@ -58,6 +61,6 @@ Steps Followed while building the Project
 
 - firebase login
 - firebase init
-  - Projects build with create-react-app uses the build folder as the public directory
+  - Projects build with create-react-app needs to use the **build** folder as the public directory
   - No need to configure as a single-page app to rewrite all the urls to index.html
-- firebase deploy
+- firebase deploy (Deploys the build folder)
