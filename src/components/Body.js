@@ -9,7 +9,11 @@ const Body = () => {
     { path: "/browse", element: <Browse /> },
   ]);
 
-  return <RouterProvider router={appRouter} />;
+  return (
+    <>
+      <RouterProvider router={appRouter} />
+    </>
+  );
 };
 
 export default Body;
