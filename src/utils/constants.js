@@ -19,6 +19,9 @@ export const TMDB_TOP_RATED_MOVIES_API_URL =
 export const TMDB_UPCOMING_MOVIES_API_URL =
   "https://api.themoviedb.org/3/movie/upcoming";
 
+export const TMDB_MOVIE_DETAIL_API_URL =
+  "https://api.themoviedb.org/3/search/movie?query=";
+
 export const TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w780";
 
 export const SUPPORTED_LANGUAGES = [

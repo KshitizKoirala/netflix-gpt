@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { TMDB_MOVIE_VIDEOS_LIST_API_URL } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
@@ -10,6 +10,8 @@ const useGetTrailerVideos = (movieId) => {
   const dispatch = useDispatch();
   //   const [trailerKey, setTrailerKey] = useState(null);
   //   const trailerId = useRef(null)
+
+  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
 
   const getMovieVideos = async () => {
     const VIDEO_API = TMDB_MOVIE_VIDEOS_LIST_API_URL.replace(
@@ -29,7 +31,7 @@ const useGetTrailerVideos = (movieId) => {
   };
 
   useEffect(() => {
-    getMovieVideos();
+    !trailerVideo && getMovieVideos();
   }, []);
 };
 

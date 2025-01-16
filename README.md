@@ -36,8 +36,9 @@ Steps Followed while building the Project
   - GPR Search Page
   - GPT Search Bar
 - (FEATURE) Multi-language Feature in our App
+- MEMOIZATION done to reduce the number of api calls
 
-- **_HYGENE PRACTICES_**
+- **_HYGIENE PRACTICES_**
   => Unsubscribed to the onAuthStateChanged callback in Header.js
   => Add the Hardcoded values to constants.js
 
