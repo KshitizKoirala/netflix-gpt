@@ -4,7 +4,7 @@ const MovieList = ({ title, movies }) => {
   // console.log(movies);
   return (
     <div className="px-6">
-      <div className="font-semibold text-2xl text-white">
+      <div className="font-semibold text-lg md:text-2xl text-white">
         <h1 className="py-4 pl-4">{title}</h1>
       </div>
       <div className="flex overflow-x-scroll scheme-dark">

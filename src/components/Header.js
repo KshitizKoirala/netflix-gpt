@@ -69,15 +69,22 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   };
 
+  /**
+   * Tailwind Responsive
+   *  Default => Mobile
+   *  sm => Tablet
+   *  md => Desktop
+   */
+
   return (
-    <div className="absolute w-full px-16 py-6 bg-gradient-to-b from-black z-10 flex justify-between">
-      <div>
+    <div className="absolute w-full px-16 py-6 bg-gradient-to-b from-black z-10 flex flex-col justify-center md:flex-row md:justify-between">
+      <div className="mx-auto md:mx-0">
         <Link to="/">
           <img className="w-36" alt="netlifx" src="./assets/netflix-logo.svg" />
         </Link>
       </div>
       {user && (
-        <div className="flex p-2">
+        <div className="flex p-2 mt-5 md:mt-0 justify-between">
           {showGptSearch && (
             <select
               className="p-1 m-2 bg-gray-900 text-white text-sm rounded-md"
@@ -96,8 +103,15 @@ const Header = () => {
           >
             {!showGptSearch ? "GPT Search" : "Homepage"}
           </button>
-          <img className="w-12 h-12" alt="profile" src={user.photoURL} />
-          <button className="ml-2 font-bold text-white" onClick={handleSignOut}>
+          <img
+            className="hidden md:block w-12 h-12"
+            alt="profile"
+            src={user.photoURL}
+          />
+          <button
+            className="ml-2 font-bold py-3 text-white"
+            onClick={handleSignOut}
+          >
             Sign out
           </button>
         </div>

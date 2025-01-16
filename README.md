@@ -36,7 +36,12 @@ Steps Followed while building the Project
   - GPR Search Page
   - GPT Search Bar
 - (FEATURE) Multi-language Feature in our App
+- Get OPen AI Api Key
+- Get Search API Call
+- Fetched getMoviesSuggestions from TMDB
+- Created gptSlice and added data
 - MEMOIZATION done to reduce the number of api calls
+- Made the website responsive
 
 - **_HYGIENE PRACTICES_**
   => Unsubscribed to the onAuthStateChanged callback in Header.js
